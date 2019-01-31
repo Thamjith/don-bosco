@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>don bosco</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./node_modules/sal.js/dist/sal.css">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li><a href="#sect1">home</a></li>
+        <li><a href="#sect2">courses</a></li>
+        <li><a href="#sect3">account</a></li>
+        <li><a href="#sect4">gallery</a></li>
+    </ul>
+
+    <section id="sect1">
+       <img src="images/original/4.jpeg" alt="don bosco">
+       <div id="bosco_desc" data-sal="slide-up" data-sal-duration="1000" data-sal-easing="ease-out-bounce">
+           <p>John Bosco popularly known as Don Bosco was an Italian Roman Catholic priest, educator and writer of the 19th century. While working in Turin, where the population suffered many of the effects of industrialization and urbanization, he dedicated his life to the betterment and education of street children, juvenile delinquents, and other disadvantaged youth. He developed teaching methods based on love rather than punishment, a method that became known as the Salesian Preventive System.
+
+                A follower of the spirituality and philosophy of Francis de Sales, Bosco was an ardent devotee of Mary, mother of Jesus, under the title Mary Help of Christians. He later dedicated his works to De Sales when he founded the Salesians of Don Bosco, based in Turin.Together with Maria Domenica Mazzarello, he founded the Institute of the Daughters of Mary Help of Christians, a religious congregation of nuns dedicated to the care and education of poor girls. He taught Dominic Savio, of whom he wrote a biography that helped the young boy be canonized. </p>
+       </div>
+    </section>
+        
+    <section id="sect2">
+            <div id="particles-js">
+
+            </div>
+    </section>
+
+    <section id="sect3">
+            <div id="login-box" data-sal="slide-right" data-sal-duration="1000" data-sal-easing="ease-out-bounce">
+                <h1>log in</h1>
+                <form action="back.php" method="post">
+                    <br>
+                    <label>user id</label>
+                    <input type="text" placeholder="enter email" name="email" required>
+                    <label>password</label>
+                    <input type="password" placeholder="enter password" name="passwords" required>
+                    <button type="submit" id="btn">log in</button>
+                    <button type="button" id="btn-admin" onclick="openadmin()">admin</button>
+                <script>
+                            function openadmin()
+                            {
+                                window.open("admin.html","_self");
+                            }
+                    </script>
+                </form>
+             </div>
+            
+    </section>
+
+    <section id="sect4">
+            <img src="images/gallery/1.jpg">
+            <img src="images/gallery/2.jpg">
+            <img src="images/gallery/3.jpg">
+            <img src="images/gallery/4.jpg">
+            <img src="images/gallery/5.jpg">
+            <img src="images/gallery/6.jpg">
+            <img src="images/gallery/7.jpg">
+            <img src="images/gallery/8.jpg">
+            <img src="images/gallery/9.jpg">
+            <img src="images/gallery/10.jpg">
+    </section>
+
+    <script src="node_modules/sal.js/dist/sal.js"></script>
+    <script>
+        sal({
+            once: false
+        });
+    </script>
+    <script src="./node_modules/particles.js/particles.js"></script>
+    <script src="./node_modules/particles.js/demo/js/app.js"></script>
+</body>
+</html>

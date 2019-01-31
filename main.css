@@ -1,0 +1,249 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+section {
+  position: relative;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  margin: 0;
+  top: 0;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  color: white;
+  line-height: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 3px;
+}
+
+#sect1 {
+  overflow: hidden;
+}
+
+#sect1 img {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+#sect2 #particles-js {
+  height: 100vh;
+  background: #000;
+}
+
+#sect3 {
+  background-image: url("images/students.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#sect3 img {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+#sect3 #login-box {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 400px;
+  width: 300px;
+  background-color: #fff;
+  padding: 16px;
+  margin: 20px;
+}
+
+#sect3 #login-box label {
+  font-weight: bold;
+  padding: 5px;
+}
+
+#sect3 #login-box input[type=text], #sect3 #login-box input[type=password] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  background: #f1f1f1;
+  border: none;
+}
+
+#sect3 #login-box input[type=text]:focus, #sect3 #login-box input[type=password]:focus {
+  background-color: #ddd;
+}
+
+#sect3 #login-box #btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+#sect3 #login-box #btn-admin {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  background-color: #3B3B98;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  opacity: 0.9;
+}
+
+#sect3 #login-box #btn-admin:hover {
+  background-color: #182C61;
+}
+
+#sect4 {
+  -webkit-columns: 5;
+          columns: 5;
+}
+
+#sect4 img {
+  height: 200px;
+  width: 200px;
+  float: left;
+  margin: 29px;
+  border: 5px #ccc solid;
+}
+
+/*#sect1{
+    scroll-snap-align: start;
+}
+#sect2{
+    scroll-snap-align: start;
+}
+#sect3{
+    scroll-snap-align: start;
+}
+#sect4{
+    scroll-snap-align: start;
+}*/
+#bosco_desc {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  height: 570px;
+  width: 350px;
+  background: rgba(0, 0, 0, 0.5);
+  border: #646464 solid;
+  color: #fff;
+  padding: 0 20px 0 20px;
+  line-height: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+  ul li a {
+    font-size: 10px;
+  }
+}
+
+#admin_body {
+  margin: 0;
+  padding: 0;
+}
+
+#admin_body nav {
+  position: absolute;
+  margin-top: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #833471;
+}
+
+#admin_body nav #back-btn {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 40px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  cursor: pointer;
+}
+
+#admin_body nav #back-btn:hover {
+  background-color: #fff;
+}
+
+#admin_body nav #admin_login {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+#admin_body nav #admin_login label {
+  font-weight: bold;
+  padding: 5px;
+}
+
+#admin_body nav #admin_login #btn_adminpage {
+  background-color: #4CAF50;
+  color: white;
+  padding: 6px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+#admin_body nav #admin_login #admin_id {
+  padding: 4px 0 4px 0;
+}
+
+#admin_body nav #admin_login #admin_pass {
+  padding: 4px 0 4px 0;
+}
+
+#admin_body nav #admin_login #btn_adminpage {
+  cursor: pointer;
+}
+
+#admin_body #two #cr_st_db_div {
+  position: absolute;
+  top: 50px;
+  height: 200px;
+  width: 100%;
+  background-color: #182C61;
+  text-align: center;
+}
+/*# sourceMappingURL=main.css.map */
