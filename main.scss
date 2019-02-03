@@ -168,58 +168,60 @@ ul {
 {  
     margin: 0;
     padding: 0;
-    nav{
+    #nav{
         position: absolute;
         margin-top: 0;
         width: 100%;
         height: 50px;
-        background-color: #833471;
+        background-color: #c0392b;
         #back-btn{
             position: absolute;
             top: 5px;
             left: 5px;
-            height: 40px;
-            transform: rotate(180deg);
-            cursor: pointer;  
-        }
-        #back-btn:hover{
-            background-color: #fff;
-        }
-        #admin_login{
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            label{
-                font-weight: bold;
-                padding: 5px;
+            a{
+                position: absolute;
+                background: #2c3e50;
+                color: #ccc;
+                text-decoration: none;
+                display: inline-block;
+                padding: 8px 16px;
+                border-radius: 50%;
+                z-index: 1;
             }
-            #btn_adminpage{
-                background-color: #4CAF50;
-                color: white;
-                padding: 6px 20px;
-                border: none;
-                cursor: pointer;
-                opacity: 0.9;
-            }
-            #admin_id{
-                padding: 4px 0 4px 0;
-            }
-            #admin_pass{
-                padding: 4px 0 4px 0;
-            }
-            #btn_adminpage{
+            a:hover {
+                background-color: #34495e;
+                color: black;
                 cursor: pointer;
             }
         }
     }
-    #two{
-        #cr_st_db_div{
-            position: absolute;
+    section{
+        height: 180px;
+        width: 100%;
+        div{
+            position: relative;
             top: 50px;
             height: 200px;
             width: 100%;
-            background-color: #182C61;
+            a{
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+        #student-entry{
+        background-color: #e74c3c;
+        text-align: center;
+        line-height: 50px;
+    }
+        #add-mark{
+            background-color: #e67e22;
             text-align: center;
+            line-height: 50px;
+        }
+        #add-attendance{
+                background-color: #f39c12;
+                text-align: center;
+                line-height: 50px;
         }
     }
 }
