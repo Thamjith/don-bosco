@@ -1,4 +1,35 @@
-﻿html {
+﻿//global
+#form-table{
+    position: relative;
+    top: 100px;
+    left: 50px;
+    form{
+        display: table;
+    }
+    p, button{
+        display: table-row;
+    }
+    label,input{
+        display: table-cell;
+    }
+    input{
+        border: none;
+        padding: 5px;
+    }
+    button{
+        position: absolute;
+        left: 200px;
+        border: none;
+        padding: 10px 20px;
+        background-color: #fed330;
+    }
+    button:hover{
+        background-color: #f7b731;
+    }
+}
+
+//index
+html {
     scroll-behavior: smooth;
 }
 body {
@@ -223,5 +254,66 @@ ul {
                 text-align: center;
                 line-height: 50px;
         }
+    }
+}
+//add student
+#addstudentbody{
+    background-color: #fa8231;
+    #nav{
+        position: absolute;
+        margin-top: 0;
+        width: 100%;
+        height: 50px;
+        background-color: #c0392b;
+        #back-btn{
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            a{
+                position: absolute;
+                background: #2c3e50;
+                color: #ccc;
+                text-decoration: none;
+                display: inline-block;
+                padding: 8px 16px;
+                border-radius: 50%;
+                z-index: 1;
+            }
+            a:hover {
+                background-color: #34495e;
+                color: black;
+                cursor: pointer;
+            }
+        }
+    }
+}
+//updatestudent
+#updatestudent{
+    background-color: #4CAF50;
+    #back-btn{
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        a{
+            position: absolute;
+            background: #2c3e50;
+            color: #ccc;
+            text-decoration: none;
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        a:hover {
+            background-color: #34495e;
+            color: black;
+            cursor: pointer;
+        }
+    }
+    #updateregister{
+        height: 50px;
+        background-color: #c0392b;
+        text-align: center;
+        line-height: 50px;
     }
 }
