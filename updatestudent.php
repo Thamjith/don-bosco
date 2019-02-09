@@ -24,17 +24,20 @@
         if(isset($_POST['submit']))
         {
             $regno = $_POST['register_no'];
-            $sql = "select * from student where register_no = '$regno'";
-            $result = mysqli_query($con,$sql);
+            $sql = "select * from student where register_no = $regno";
+            $result = mysqli_query($conn,$sql);
             if(!$result)
             {
                 die('could not fetch data: '.mysqli_error($conn) );
             }
-            $array = mysqli_fetch_array($result);
+            //$array = mysqli_fetch_array($result);
         }
     ?>
-
     <div id="form-table">      
+    <?php
+        while($array = mysqli_fetch_array($result))
+        {
+    ?>
         <form action="" method="post" id="">
                 <p>
                     <label for="">First Name :</label>
@@ -48,72 +51,63 @@
                 <br>
                 <p>
                     <label for="">Gender</label>
-                    Male :
-                    <input type="radio" name="gender" value="male">
-                    Female :
-                    <input type="radio" name="gender" value="female">
+                    <input type="text" name="lastname" value="<?php echo $array['3']?>" id="" required>
                 </p>
                 <br>
                 <p>
                     <label for="">Date Of Birth</label>
-                    <input type="date" name="dob" id="" required>
+                    <input type="text" name="dob" value="<?php echo $array['4']?>" id="" required>
                 </p>
                 <br>
                 <p>
                     <label for="">Father's Name :</label>
-                    <input type="text" name="fathername" id="" required>
+                    <input type="text" name="fathername" value="<?php echo $array['5']?>" id="" required>
                 </p>
                 <br>
                 <p>
                     <label for="">Father's Occupation :</label>
-                    <input type="text" name="fatheroccupation" id="" required>
+                    <input type="text" name="fatheroccupation" value="<?php echo $array['6']?>" id="" required>
                 </p>
                 <br>
                 <p>
                     <label for="">Mother's Name :</label>
-                    <input type="text" name="mothername" id="" required>
+                    <input type="text" name="mothername" value="<?php echo $array['7']?>" id="" required>
                 </p>
                 <br>
                 <p>
                     <label for="">Mother's Occupation :</label>
-                    <input type="text" name="motheroccupation" id="" required>
+                    <input type="text" name="motheroccupation" value="<?php echo $array['8']?>" id="" required>
                 </p>
                 <br>
                 <p>
                     <label for="">Address :</label>
-                    <textarea name="address" id="" cols="25" rows="5"></textarea>
+                    <textarea name="address" id="" cols="25" rows="5" value="<?php echo $array['9']?>"></textarea>
                 </p>
                 <br>
                 <p>
                     <label for="">Phone No :</label>
-                    <input type="text" name="phoneno" id="" required>
+                    <input type="text" name="phoneno" value="<?php echo $array['10']?>" id="" required>
                 </p>
                 <br>
                 <p>
                     <label for="">E-Mail ID</label>
-                    <input type="email" name="emailid" id="" placeholder="example@gmail.com" required>
+                    <input type="email" name="emailid" id="" value="<?php echo $array['11']?>" required>
                 </p>
                 <br>
                 <p>
                     <label for="">Year Of Join</label>
-                    <input type="date" name="yoj" id="" required>
+                    <input type="test" name="yoj" value="<?php echo $array['12']?>" id="" required>
                 </p>
                 <br>
                 <p>
                     <label for="">Course</label>
-                    <select name="course" id="">
-                        <option value="BBA">BBA</option>
-                        <option value="BCA">BCA</option>
-                        <option value="BCOM">B.COM</option>
-                        <option value="BA">BA ENGLISH</option>
-                        <option value="MCOM">MCOM</option>
-                    </select>
+                    <input type="test" name="yoj" value="<?php echo $array['13']?>" id="" required>
                 </p>
                 <br>
-                <p>
-                    <button type="submit" form="addstudent" name="submit">submit</button>
-                </p>
             </form>
+    <?php
+        }
+    ?>
     </div>
 </body>
 </html>
