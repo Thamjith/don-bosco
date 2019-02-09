@@ -130,12 +130,10 @@
             {
                 die('could not enter data: '.mysqli_error($conn) );
             }
-            echo "Entered data successfully\n";
+            echo '<script langauge="javascript"> alert("Entered data successfully") </script>';
         }
-
         mysqli_close($conn);
+        exit();
 ?>
-
-
 </body>
 </html>
