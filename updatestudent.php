@@ -9,19 +9,19 @@
 </head>
 <body id="updatestudent">
     <div id="back-btn">
-        <a href="./admin.html">&#8249;</a>
+        <a href="./admin.php">&#8249;</a>
     </div>
-    <div id="updateregister">
+    <div id="nav-reg">
         <form action="" method="post">
             <label for="">Enter the Register No:</label>
             <input type="text" name="register_no">
-            <button type="submit" name="submit">submit</button>
+            <button type="submit" name="deal">submit</button>
         </form>
     </div>
 
     <?php
         include('dbconnection.php');
-        if(isset($_POST['submit']))
+        if(isset($_POST['deal']))
         {
             $regno = $_POST['register_no'];
             $sql = "select * from student where register_no = $regno";
@@ -33,7 +33,7 @@
             //$array = mysqli_fetch_array($result);
         }
     ?>
-    <div id="form-table">      
+    <div class="form-table">      
     <?php
         while($array = mysqli_fetch_array($result))
         {
@@ -81,7 +81,7 @@
                 <br>
                 <p>
                     <label for="">Address :</label>
-                    <textarea name="address" id="" cols="25" rows="5" value="<?php echo $array['9']?>"></textarea>
+                    <textarea name="address" id="" cols="25" rows="5"><?php echo htmlspecialchars($array['9'])?></textarea>
                 </p>
                 <br>
                 <p>

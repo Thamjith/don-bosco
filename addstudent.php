@@ -10,10 +10,10 @@
 <body id="addstudentbody">
     <div id="nav">
         <div id="back-btn">
-            <a href="./admin.html">&#8249;</a>
+            <a href="./admin.php">&#8249;</a>
         </div>
     </div>
-    <div id="form-table">
+    <div class="form-table">
         <form action="" method="post" id="addstudent">
             <p>
                 <label for="">Register No:</label>
@@ -33,9 +33,9 @@
             <p>
                 <label for="">Gender</label>
                 Male :
-                <input type="radio" name="gender" value="male">
+                <input type="radio" name="gender" value="male" required>
                 Female :
-                <input type="radio" name="gender" value="female">
+                <input type="radio" name="gender" value="female" required>
             </p>
             <br>
             <p>
@@ -100,6 +100,8 @@
         </form> 
     </div>
 
+    <!--creating main database table called student
+
     <?php
         include('dbconnection.php');
         mysqli_select_db($conn,"student");
@@ -131,9 +133,14 @@
                 die('could not enter data: '.mysqli_error($conn) );
             }
             echo '<script langauge="javascript"> alert("Entered data successfully") </script>';
+            $dbsend = mysqli_query($conn,"insert into student_marklist(register_no,password)
+            values('$register_no','$dob')");
         }
         mysqli_close($conn);
         exit();
 ?>
+
+
+
 </body>
 </html>

@@ -1,27 +1,27 @@
-#form-table {
+.form-table {
   position: relative;
   top: 100px;
   left: 50px;
 }
 
-#form-table form {
+.form-table form {
   display: table;
 }
 
-#form-table p, #form-table button {
+.form-table p, .form-table button {
   display: table-row;
 }
 
-#form-table label, #form-table input {
+.form-table label, .form-table input {
   display: table-cell;
 }
 
-#form-table input {
+.form-table input {
   border: none;
   padding: 5px;
 }
 
-#form-table button {
+.form-table button {
   position: absolute;
   left: 200px;
   border: none;
@@ -29,8 +29,43 @@
   background-color: #fed330;
 }
 
-#form-table button:hover {
+.form-table button:hover {
   background-color: #f7b731;
+}
+
+#back-btn {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+#back-btn a {
+  position: absolute;
+  background: #2c3e50;
+  color: #ccc;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+#back-btn a:hover {
+  background-color: #34495e;
+  color: black;
+  cursor: pointer;
+}
+
+#nav-reg {
+  height: 50px;
+  background-color: #c0392b;
+  text-align: center;
+  line-height: 50px;
+}
+
+#nav-reg button {
+  border: 5px;
+  padding: 3px 6px;
 }
 
 html {
@@ -227,29 +262,6 @@ ul li a {
   background-color: #c0392b;
 }
 
-#admin_body #nav #back-btn {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-}
-
-#admin_body #nav #back-btn a {
-  position: absolute;
-  background: #2c3e50;
-  color: #ccc;
-  text-decoration: none;
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-#admin_body #nav #back-btn a:hover {
-  background-color: #34495e;
-  color: black;
-  cursor: pointer;
-}
-
 #admin_body section {
   height: 180px;
   width: 100%;
@@ -287,6 +299,8 @@ ul li a {
 
 #addstudentbody {
   background-color: #fa8231;
+  margin: 0;
+  padding: 0;
 }
 
 #addstudentbody #nav {
@@ -297,60 +311,41 @@ ul li a {
   background-color: #c0392b;
 }
 
-#addstudentbody #nav #back-btn {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-}
-
-#addstudentbody #nav #back-btn a {
-  position: absolute;
-  background: #2c3e50;
-  color: #ccc;
-  text-decoration: none;
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-#addstudentbody #nav #back-btn a:hover {
-  background-color: #34495e;
-  color: black;
-  cursor: pointer;
-}
-
 #updatestudent {
   background-color: #4CAF50;
 }
 
-#updatestudent #back-btn {
-  position: absolute;
-  top: 5px;
-  left: 5px;
+#add-mark {
+  background-color: #fa8231;
 }
 
-#updatestudent #back-btn a {
-  position: absolute;
-  background: #2c3e50;
-  color: #ccc;
+#add-mark #sem-nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#add-mark #sem-nav a {
   text-decoration: none;
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 50%;
-  z-index: 1;
+  color: #fff;
 }
 
-#updatestudent #back-btn a:hover {
-  background-color: #34495e;
-  color: black;
-  cursor: pointer;
+#add-mark .form-table {
+  position: relative;
+  top: 50px;
+  left: 10px;
 }
 
-#updatestudent #updateregister {
-  height: 50px;
-  background-color: #c0392b;
-  text-align: center;
-  line-height: 50px;
+#add-mark .form-table form {
+  border-spacing: 70px 20px;
+  border: 1px solid;
+}
+
+#add-mark .form-table p, #add-mark .form-table button {
+  display: table-row;
 }
 /*# sourceMappingURL=main.css.map */
